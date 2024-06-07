@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  lbtest:
+    build: .
+    command: node index.js
+    ports:
+      - "2222:2222"
+    volumes:
+      - ./app:/home/app
