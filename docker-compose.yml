@@ -7,4 +7,12 @@ services:
     ports:
       - "2222:2222"
     volumes:
-      - ./app:/home/app
+      - nfs-volume:/home/app/files
+
+volumes:
+  nfs-volume:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=35.224.170.61,rw
+      device: :/var/nfs/general
