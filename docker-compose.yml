@@ -7,10 +7,10 @@ services:
     ports:
       - "7777:2222"
     volumes:
-      - nfs-volume:/home/app/files
+      - nfs-volume1:/home/app/files
 
 volumes:
-  nfs-volume:
+  nfs-volume1:
     driver: local
     driver_opts:
       type: nfs
